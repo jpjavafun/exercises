@@ -22,48 +22,86 @@ public class CollectionsAlgImpl {
         return c;
         
     }
-    /*
-    public Collection shuffle(){
+    
+    public Collection shuffle(List c){
+        
+        Collections.shuffle(c);
+        
+        return c;
         
     }
     
-    public Collection reverse(){
+    public Collection reverse(List c){
         
+        Collections.reverse(c);
         
+        return c;
     }
     
-    public Collection rotate(){
-        
-    }
     
-    public Collection swap(){
+    public Collection rotate(List c, int dist){
         
-    }
-    
-    public Collection replaceAll(){
+        Collections.rotate(c, dist);
         
-    }
-    
-    public Collection fill(){
-        
-    }
-    
-    public Collection copy(){
+        return c;
         
     }
     
     
-    public Collection binarySearch(){
+    
+    public Collection swap(List c, int i, int j){
+        
+        Collections.swap(c,i,j);
+        
+        return c;
         
     }
     
-    public int indexOfSubList(){
+    
+    public Collection replaceAll(List c, Object oldval, Object newVal){
+        
+        
+        Collections.replaceAll(c, oldval, newVal);
+        
+        return c;
+    }
+    
+    public Collection fill(List c, Object item){
+        
+        Collections.fill(c, item);
+        
+        return c;
         
     }
     
     
-    public int lastIndexOfSubList(){
+    public Collection copy(List one, List two){
+        
+        Collections.copy(one, two);
+        
+        return two;
         
     }
-*/    
+    
+    
+    public <T> int binarySearch(List c, T key){
+        
+        return Collections.binarySearch(c, key);
+        
+    }
+    
+    
+    public int indexOfSubList(List c, List d){
+      
+        return Collections.indexOfSubList(c, d);
+         
+    }
+    
+    
+    public int lastIndexOfSubList(List c, List d){
+        
+        return Collections.lastIndexOfSubList(c,d);
+        
+    }
+   
 }

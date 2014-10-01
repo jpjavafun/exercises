@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.joesystem.collectionstudy.CollectionsAlgImplTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.291 sec
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.094 sec
