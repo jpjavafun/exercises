@@ -1,0 +1,6 @@
+#surefire
+#Wed Oct 22 22:48:55 BST 2014
+maven.ext.class.path=/space/netbeans/netbeans-8.0/java/maven-nblib/netbeans-eventspy.jar
+user.dir=/space/netbeans_projects/AOPStudy
+localRepository=/home/jpaisley/.m2/repository
+basedir=/space/netbeans_projects/AOPStudy
