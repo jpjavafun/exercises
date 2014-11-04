@@ -10,6 +10,8 @@ import com.jp.bestjava.collectionstudy.*;
 import com.jp.bestjava.generics.*;
 import com.jp.bestjava.equalsstudy.*;
 import com.jp.bestjava.generics.*;
+import com.jp.bestjava.enums.*;
+import com.jp.bestjava.generics.*;
 import java.util.*;
 
 /**
@@ -37,6 +39,9 @@ public class BestJavaStart {
         jo.hashCode();
         
         
+        SingletonEnum.INSTANCE.doSomething();
+        
+        String s = GenericsImpl.getNum("s");
         
     }
     
