@@ -12,6 +12,7 @@ import com.jp.bestjava.equalsstudy.*;
 import com.jp.bestjava.generics.*;
 import com.jp.bestjava.enums.*;
 import com.jp.bestjava.generics.*;
+import com.jp.bestjava.datastructure.*;
 import java.util.*;
 
 /**
@@ -42,6 +43,8 @@ public class BestJavaStart {
         SingletonEnum.INSTANCE.doSomething();
         
         String s = GenericsImpl.getNum("s");
+        
+        ArraysStudy.createArrays();
         
     }
     
