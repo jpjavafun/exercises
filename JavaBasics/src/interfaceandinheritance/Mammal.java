@@ -34,6 +34,10 @@ package interfaceandinheritance;
      
      public abstract void speak();
      
+     protected String doodoo(){
+         System.out.println("doodoo");
+         return "doodoo";
+     }
      
      
     

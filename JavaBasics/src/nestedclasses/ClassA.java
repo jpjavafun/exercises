@@ -10,7 +10,7 @@ package nestedclasses;
  *
  * @author jpaisley
  */
-public class ClassA {
+public class ClassA implements Cloneable {
     
      int memberA = 10;
     

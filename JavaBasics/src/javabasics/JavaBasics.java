@@ -11,13 +11,17 @@ import interfaceandinheritance.*;
 import java.lang.*;
 import nestedclasses.*;
 import enums.*;
-
+import cloning.*;
+import javabasics.generics.*;
 /**
  *
  * @author jpaisley
  */
 public class JavaBasics {
 
+    
+      
+    
     /**
      * @param args the command line arguments
      */
@@ -81,6 +85,55 @@ public class JavaBasics {
             
         }
         
+      System.out.println(EnumSingleton.INSTANCE);
+      
+     
+      
+      try{
+           BaseClassA a = new BaseClassA();
+          BaseClassA b = (BaseClassA) a.clone();
+          
+          BaseClassA c = a;
+        
+        System.out.println("a == b :"+ (a == b));
+        
+        
+      } catch (CloneNotSupportedException e){
+          e.printStackTrace();
+      }
+      
+      
+      BaseClassB chair = new BaseClassB();
+      
+      System.out.println(chair.desk1);
+      System.out.println(chair.desk2);
+      System.out.println(chair.desk3);
+      
+      System.out.println(chair.triangle(6));
+      
+      
+       System.out.println(chair.fibonacci(5));
+      
+       
+        BoxClass <Integer> bx1 = new BoxClass<>();
+        bx1.set(9);
+        
+        int yBox = bx1.setGeneric(9, 9);
+       
+        int yBox2 = bx1.setGenericAgain(9, 22);
+        
+        
+        int largeInt = 213213221;
+        byte y = (byte)largeInt;
+        Byte xx = new Byte(y);
+        System.out.println(xx.byteValue());
+        
+ 
     }
     
+   
+    
+    
+    
+   
 }

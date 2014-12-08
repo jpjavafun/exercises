@@ -34,5 +34,11 @@ public class Horse extends Mammal{
          System.out.println("Horse Running about");
     }
     
+    public void callDooDoo(){
+        
+        System.out.println("calling private doodoo" + doodoo());
+        
+    }
+    
     
 }
