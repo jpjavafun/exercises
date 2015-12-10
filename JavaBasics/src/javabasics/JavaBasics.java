@@ -11,8 +11,8 @@ import interfaceandinheritance.*;
 import java.lang.*;
 import nestedclasses.*;
 import enums.*;
-import cloning.*;
-import javabasics.generics.*;
+//import cloning.*;
+//import javabasics.generics.*;
 /**
  *
  * @author jpaisley
@@ -40,7 +40,7 @@ public class JavaBasics {
         
         
         EnumCreator ec = new EnumCreator(EnumCreator.Currency.DIME);
-        */
+        
         
         JoeInterface joe = new Husband();
         joe.kissRuth();
@@ -114,7 +114,7 @@ public class JavaBasics {
       
        System.out.println(chair.fibonacci(5));
       
-       
+       /*
         BoxClass <Integer> bx1 = new BoxClass<>();
         bx1.set(9);
         
@@ -127,6 +127,16 @@ public class JavaBasics {
         byte y = (byte)largeInt;
         Byte xx = new Byte(y);
         System.out.println(xx.byteValue());
+               
+        */
+       
+       
+       int x = 4; int y =2;
+       int total =0;
+       
+       total += (x << y);
+       
+       System.out.println(total);
         
  
     }
