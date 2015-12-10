@@ -1,0 +1,12 @@
+com/packtpub/spring/ws/javaconfig/controller/MySimpleException.class
+com/packtpub/spring/ws/javaconfig/config/MyApplicationContextConfig.class
+com/packtpub/spring/ws/javaconfig/service/MySimpleService.class
+com/packtpub/spring/ws/javaconfig/model/Message.class
+com/packtpub/spring/ws/javaconfig/model/Book.class
+com/packtpub/spring/ws/javaconfig/config/HibernateConfig$1.class
+com/packtpub/spring/ws/javaconfig/model/MySimpleDAO.class
+com/packtpub/spring/ws/javaconfig/controller/MySimpleController.class
+com/packtpub/spring/ws/javaconfig/config/MyWebAppInitializer.class
+com/packtpub/spring/ws/javaconfig/controller/MyAPIController.class
+com/packtpub/spring/ws/javaconfig/dao/BookDAO.class
+com/packtpub/spring/ws/javaconfig/config/HibernateConfig.class

@@ -1,0 +1,11 @@
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/model/MySimpleDAO.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/service/MySimpleService.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/dao/BookDAO.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/controller/MySimpleController.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/model/Message.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/config/MyWebAppInitializer.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/config/MyApplicationContextConfig.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/config/HibernateConfig.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/controller/MyAPIController.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/model/Book.java
+/space/netbeans/spring-ws-javaconfig/src/main/java/com/packtpub/spring/ws/javaconfig/controller/MySimpleException.java

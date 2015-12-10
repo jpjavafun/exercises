@@ -1,0 +1,182 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package knightsproblem;
+
+/**
+ *
+ * @author jpaisley
+ */
+import java.util.*;
+
+public class KnightsProblem {
+
+    private KeyPad keys;
+    private List<String> sequences;
+    private long numberOfSequences1;
+    private long numberOfSequences;
+    //private Map<Character,ArrayList<SequencePart>> sequencesStart;
+    private Map<Character, SequenceCount> sequencesEnd;
+    private ArrayList<SequencePart> sequencesStart;
+
+    KnightsProblem() {
+
+        this.keys = new KeyPad();
+        this.sequences = new ArrayList<>();
+        this.numberOfSequences = 0;
+        this.numberOfSequences1 = 0;
+        //this.sequencesStart= new HashMap<>();
+        this.sequencesEnd = new HashMap<>();
+        this.sequencesStart = new ArrayList<>();
+
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        KnightsProblem kp = new KnightsProblem();
+
+        for (Key k : kp.keys.keys) {
+
+            //kp.sequencesStart.put(k.getName(),new ArrayList());
+            kp.sequencesEnd.put(k.getName(), new SequenceCount());
+
+        }
+
+        for (Key k : kp.keys.keys) {
+
+            //kp.makeMove(k.getName(), 0,' ', 0, new StringBuffer()); 
+            kp.makeMove2(k.getName(), 0, ' ', 0, k.getName(), new StringBuffer());
+
+        }
+
+        System.out.println("----------------------------------------");
+        for (Key k : kp.keys.keys) {
+
+            kp.makeMove(k.getName(), 0, ' ', 0);
+                  //kp.makeMove2(k.getName(), 0,' ', 0, k.getName(), new StringBuffer()); 
+
+        }
+
+        //kp.makeMove('A', new StringBuilder(),' ', 0);
+        //or(String s : kp.sequences){
+            //  System.out.println(s);
+        // System.out.println(s);
+        //}
+        int totalCount = 0;
+        /*
+         System.out.println("HAlfway"+kp.numberOfSequences);
+         for(Key k : kp.keys.keys){
+         ArrayList<SequencePart> ll = kp.sequencesStart.get(k.getName());
+         totalCount+= ll.size();
+                    
+         for(SequencePart sp : ll){
+         Key myKey = kp.keys.getKey(sp.getEnd());
+         for(char c : myKey.getMoves()){
+         if(c!=sp.getEnd()){
+         SequenceCount tp = kp.sequencesEnd.get(c);
+         kp.numberOfSequences+= tp.getTotalCounts(sp.getNoOfVowels());
+         }
+         } 
+                        
+         }
+            
+         }
+         */
+
+        System.out.println("-----------------Starting Merge------------------------------");
+        for (SequencePart sp : kp.sequencesStart) {
+           // System.out.println("Getting sequence part" + sp.getString());
+            
+            Key myKey = kp.keys.getKey(sp.getEnd());
+            for (char c : myKey.getMoves()) {
+               int totals =0;
+               if (c != sp.getLast()) {
+                  
+                    SequenceCount tp = kp.sequencesEnd.get(c);
+                   // System.out.println("Getting output for:"+c);
+                    //String sEnd = Character.toString(sp.getLast())+ Character.toString(sp.getEnd());
+                   // List<String> arr = tp.getTotalCounts(sp.getNoOfVowels(), sp.getLast(),sp.getEnd());
+                     totals+= tp.getTotalCounts(sp.getNoOfVowels(),sp.getEnd());
+                    //for(String st : arr){
+                    //    if((st.charAt(1) != sp.getEnd())&&(st.charAt(0)!=sp.getLast())){
+                           // System.out.println(sp.getEnd()+st);
+                        //totals++;
+                    //totals+= arr.size();
+                       // }
+                   // }
+                //}
+               }
+                kp.numberOfSequences +=totals;
+                //System.out.println("total for seqs="+totals);
+            }
+
+        }
+
+
+        System.out.println("SIZE:" + totalCount);
+        System.out.println("Number of sequences1:" + kp.numberOfSequences1);
+        System.out.println("Number of sequences:" + kp.numberOfSequences);
+
+    }
+
+    public void makeMove(char startKey, int pathLength, char lastKey, int vowelCount) {
+
+        pathLength++;
+
+        Key myKey = keys.getKey(startKey);
+
+        if (myKey.isVowelKey()) {
+            vowelCount++;
+        }
+        if (vowelCount >= 3) {
+            return;
+        }
+
+        if (pathLength == 14) {
+            numberOfSequences1++;
+            return;
+        }
+
+        for (char c : myKey.getMoves()) {
+            if (c != lastKey) {
+                makeMove(c, pathLength, startKey, vowelCount);
+           }
+       }
+
+    }
+
+    public void makeMove2(char startKey, int pathLength, char lastKey, int vowelCount, char initKey, StringBuffer sb) {
+
+        pathLength++;
+        sb.append(startKey);
+
+        Key myKey = keys.getKey(startKey);
+
+        if (myKey.isVowelKey()) {
+            vowelCount++;
+        }
+        if (vowelCount >= 3) {
+            return;
+        }
+
+        if (pathLength == 7) {
+            SequencePart sp = new SequencePart(pathLength, initKey, startKey, vowelCount, lastKey);
+            sequencesStart.add(sp);
+            sequencesEnd.get(initKey).incrementCount(vowelCount, sb.toString().charAt(1));
+            return;
+        }
+
+        for (char c : myKey.getMoves()) {
+           if (c != lastKey) {
+                makeMove2(c, pathLength, startKey, vowelCount, initKey, new StringBuffer(sb));
+           }
+        }
+
+    }
+
+}

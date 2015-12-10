@@ -1,0 +1,4 @@
+com/packtpub/springmvc/config/JoeFormConfig.class
+com/packtpub/springmvc/form/controller/JoeFormController.class
+com/packtpub/springmvc/form/model/Student.class
+com/packtpub/springmvc/config/JoeInitializer.class
